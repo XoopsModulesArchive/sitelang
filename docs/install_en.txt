@@ -1,0 +1,156 @@
+$Id: install_en.txt,v 1.3 2005/05/13 23:47:15 rowd Exp $
+
+Module Name      : Sitelang
+Version Number   : 0.3 (Beta)
+Module developer : Rowd ( http://keybased.net/dev/ )
+
+
+Install Instructions
+
+1. Upload the sitelang directory to XOOPS_URL/modules/
+
+
+2. Log in to your site as administrator.
+
+
+3. Install the module using the XOOPS module administration panel at 'System Admin -> Modules'.
+
+
+
+============================================================
+*                     IMPORTANT !!!
+*
+* Some XOOPS core files need to be changed in order for this module to work correctly!
+*
+* You can either follow the instructions below to make the changes yourself,
+* or visit the sitelang development site at:
+*
+*     http://dev.xoops.org/modules/xfmod/project?sitelang
+*
+* and download the already changed files for your version of XOOPS.
+*
+============================================================
+
+
+
+-------- This part is necessary to be able to detect language choices --------
+4. Open XOOPS_ROOT_URL/include/common.php in a text/code editor (Windows 'Notepad' or equivalent will work).
+
+
+5. Comment out the language selection by placing /* */ around it as shown below.
+
+    // #################### Include site-wide lang file ##################
+/*    if ( file_exists(XOOPS_ROOT_PATH."/language/".$xoopsConfig['language']."/global.php") ) {
+        include_once XOOPS_ROOT_PATH."/language/".$xoopsConfig['language']."/global.php";
+    } else {
+        include_once XOOPS_ROOT_PATH."/language/english/global.php";
+    }
+
+    // ################ Include page-specific lang file ################
+    if (isset($xoopsOption['pagetype']) && false === strpos($xoopsOption['pagetype'], '.')) {
+        if ( file_exists(XOOPS_ROOT_PATH."/language/".$xoopsConfig['language']."/".$xoopsOption['pagetype'].".php") ) {
+            include_once XOOPS_ROOT_PATH."/language/".$xoopsConfig['language']."/".$xoopsOption['pagetype'].".php";
+        } else {
+            include_once XOOPS_ROOT_PATH."/language/english/".$xoopsOption['pagetype'].".php";
+        }
+    }
+    $xoopsOption = array();
+
+    if ( !defined("XOOPS_USE_MULTIBYTES") ) {
+        define("XOOPS_USE_MULTIBYTES",0);
+    }
+*/
+
+
+6. Find the 'closesite' line (around line #232 in XOOPS-JP 2.0.9, around line #199 in XOOPS-JP 2.0.10) :
+ " if ($xoopsConfig['closesite'] == 1) { "
+
+Add the following lines before it, like this:
+
+    // ############## sitelang module additions ############## 
+    if (!isset($xoopsOption['nositelang'])) {
+        include_once XOOPS_ROOT_PATH."/modules/sitelang/include/init_lang.php";
+    }
+	$xoopsOption = array();
+    // end sitelang module additions
+
+    if ($xoopsConfig['closesite'] == 1) {
+
+
+7. Save your changes to common.php
+
+
+-------- This part is needed for the main menu to display language specific names --------
+8. Open XOOPS_URL/modules/system/blocks/system_blocks.php in a text editor.
+
+Find in the function: function b_system_main_show()
+
+    $module_handler =& xoops_gethandler('module');
+
+Change it too look like this:
+
+    $module_handler =& xoops_getmodulehandler('XoopsModuleLang', 'sitelang');
+
+
+9. In the same function find:
+    $block['modules'][$i]['name'] = $modules[$i]->getVar('name');
+
+Change it too look like this:
+
+    $block['modules'][$i]['name'] = $modules[$i]->getVar('modname');
+
+
+10. Save your changes to system_blocks.php
+
+
+-------- This is needed for a css file to be associated with a language --------
+11. Open XOOPS_URL/footer.php
+
+Find:
+		if (!headers_sent()) {
+			header('Content-Type:text/html; charset='._CHARSET);
+			header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+			//header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
+			header('Cache-Control: private, no-cache');
+			header('Pragma: no-cache');
+		}
+		$xoopsTpl->xoops_setCaching(0);
+		$xoopsTpl->display($xoopsConfig['theme_set'].'/theme.html');
+
+Change to look like:
+		if (!headers_sent()) {
+			header('Content-Type:text/html; charset='._CHARSET);
+			header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+			//header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
+			header('Cache-Control: private, no-cache');
+			header('Pragma: no-cache');
+		}
+		$xoopsTpl->xoops_setCaching(0);
+
+		// ----- sitelang addition ----- //
+		include_once XOOPS_ROOT_PATH . '/modules/sitelang/include/sl_footer.php'; 
+		// end sitelang addition
+
+		$xoopsTpl->display($xoopsConfig['theme_set'].'/theme.html');
+
+12. Save your changes to footer.php
+
+
+
+-------- This is needed for the block headings to display the language specific block names --------
+11. Open XOOPS_URL/header.php
+
+Find (around line #88):
+    // get all blocks and assign to smarty
+    $xoopsblock = new XoopsBlock();
+
+Change to look like:
+
+    // get all blocks and assign to smarty
+    $xoopsblock = new XoopsBlockLang(); // changed from XoopsBlock for sitelang module
+
+
+The module is fully installed!
+
+
+

@@ -1,0 +1,24 @@
+$Id: CHANGELOG.txt,v 1.2 2005/05/19 14:56:59 rowd Exp $
+
+Module Name      : Sitelang
+Version Number   : 0.3 Beta
+Module developer : Rowd ( http://keybased.net/dev/ )
+
+version 0.3
+- new administration sections for block names and language names
+- block names are now language specific, as are language names
+- support of GIJOE'S "Easiest multilanguage hack", meaning that content surrounded by language tags of the current langcode (i.e. fr, en, ja) will automatically be used. Can also be made to use xml lang tags.
+- New MySQL database table added, new fields added and some existing fields changed.
+- some optimizing of sql queries by extending xoops classes for modules and blocks for langauge support
+
+
+Version 0.2
+- redesigned administration section.
+- added support for rtl languages and languages requiring specific font families to display correctly.
+
+Version 0.11
+- changed oninstall function to also insert a lang record for default language if not english
+- expanded oninstall function to also insert records for lang_block and lang_module
+- changed module administration page. (requested by JasonMR)
+- default language cannot be uninstalled
+- default language automatically installed and activated if not already so

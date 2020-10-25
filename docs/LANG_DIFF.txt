@@ -1,0 +1,41 @@
+$Id: LANG_DIFF.txt,v 1.2 2005/05/19 14:56:59 rowd Exp $
+
+Module Name      : Sitelang
+Version Number   : 0.3 Beta
+Module developer : Rowd ( http://keybased.net/dev/ )
+
+
+version 0.2
+- added _AM_LANG_CHARACTERSET
+    "Character set"
+- added _AM_LANG_CURRENTLANG
+    "Current Language"
+- added _AM_LANG_INPUTDISABLED
+    "Unable to display"
+- added _AM_LANG_INPUTDISABLED_DESC
+    "Unable to display due to the text using a different character set than the page. Use the language select box at the top of the page to change to the correct character set."
+- added _AM_LANG_DEFAULTLANG_DESC
+    "The default language is the language that the site visitor first sees, until they choose another."
+- added _AM_LANG_DEFAULTMODNAME_DESC
+    "The default module name is the text that the site visitor first sees in the main menu, until they choose another language."
+- added _AM_LANG_SITETEXTDEFAULT
+    "Edit default site text"
+- added _AM_LANG_DEFAULTSITETEXT_DESC
+    "The default language is the language that the site visitor sees the very first time they visit a site - if they choose another"
+- added _AM_LANG_ADDCSS
+    "Add CSS"
+- added _AM_LANG_CURRENTCSS
+    "Current CSS file for the %s language is"
+- added _AM_LANG_SELECTCSS
+    "Select a new CSS file"
+- added _AM_LANG_CSSPATH_DESC
+    "The path to the CSS files directory is"
+
+
+Version 0.11
+- changed _AM_LANG_MODDEFAULT 
+    from "The default module name is: " to "Edit default module name"
+_ added AM_LANG_DEFAULT
+    "- Default -"
+_ added _AM_LANG_LANGDEFAULT
+    "Edit default site language"

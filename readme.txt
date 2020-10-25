@@ -1,0 +1,1 @@
+See the 'docs' folder for all documentation, including install instructions and license.

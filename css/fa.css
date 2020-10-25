@@ -1,0 +1,275 @@
+body {
+	font-family : Tahoma; 
+} 
+body td , p , div {
+	direction : rtl;
+	font-family : Tahoma; 
+} 
+table {
+	direction : rtl;
+	text-align : right; 
+} 
+table td {
+	
+	font-family : Tahoma; 
+	text-align : right; 
+} 
+a:link , a:active , a:visited {
+	direction : rtl;
+	font-family : Tahoma; 
+	
+} 
+a:hover {
+	direction : rtl;
+	font-family : Tahoma; 
+	
+} 
+h1 {
+	direction : rtl;
+	font-family : Tahoma; 
+} 
+h2 {
+	direction : rtl;
+	font-family : Tahoma; 
+} 
+ul {
+	text-align : right; 
+	font-family : Tahoma; 
+	direction : rtl; 
+} 
+input , select , textarea {
+	direction : rtl;
+	font-family : Tahoma;  
+	text-align : right; 
+    
+} 
+input.formButton {
+	direction : rtl;
+	text-align : right; 
+} 
+.item {
+	font-family : Tahoma; 
+	direction : rtl; 
+    
+} 
+.itemHead {
+	direction : rtl;
+	font-family : Tahoma; 
+    
+} 
+.itemInfo {
+	text-align : right; 
+	font-family : Tahoma; 
+	direction : rtl; 
+	
+} 
+.itemTitle a {
+	direction : rtl;
+	 
+} 
+.itemPoster {
+	direction : rtl;
+	font-family : Tahoma;
+ 	
+} 
+.itemPostDate {
+	font-family : Tahoma; 
+	direction : rtl; 
+	text-align : left; 
+    
+} 
+.itemStats {
+	direction : rtl; 
+	text-align : right; 
+	font-family : Tahoma;
+	
+} 
+.itemBody {
+	direction : rtl;
+	font-family : Tahoma;  
+	text-align: Justify;
+	
+} 
+.itemText {
+	font-family : Tahoma; 
+	direction : rtl;
+	text-align: Justify;
+	
+} 
+.itemText:first-letter {
+	font-family : Tahoma; 
+} 
+.itemFoot {
+	text-align : left; 
+	font-family : Tahoma;
+    
+} 
+th {
+	font-family : Tahoma; 
+	direction : rtl;
+	
+} 
+th a:link , th a:active , th a:visited {
+	direction : rtl;
+	
+}
+.blockTitle {
+	font-family : Tahoma;  
+	direction : rtl; 
+	text-align : right;
+	
+} 
+.blockContent {
+	font-family : Tahoma; 
+	direction : rtl;
+	
+} 
+.outer {
+     
+     direction : rtl;
+}
+.head {
+     
+     direction : rtl;
+}
+ .even {
+     
+     direction : rtl;
+}
+ .odd {
+     
+     direction : rtl;
+}
+ .foot {
+     
+     direction : rtl;
+}
+tr.even td {
+	font-family : Tahoma; 
+	direction : rtl;
+	
+} 
+tr.odd td {
+	font-family : Tahoma; 
+	direction : rtl;
+	
+}
+div.errorMsg {
+     
+}
+div.confirmMsg {
+	font-family : Tahoma; 
+	direction : rtl; 
+	text-align : right;
+
+} 
+div.resultMsg {
+ 
+}
+div.xoopsCode {
+	font-family : Tahoma;
+	direction : ltr;
+	
+} 
+
+div.xoopsQuote {
+font-family : Tahoma; 
+	direction : rtl; 
+	text-align : right; 
+	
+
+} 
+.comTitle {
+	direction : rtl; 
+	text-align : right; 
+     
+}
+ .comText {
+     
+     direction : rtl;
+}
+.comUserStat {
+        font-family : Tahoma; 
+	direction : rtl; 
+ 
+}
+.comDate {
+	font-family : Tahoma; 
+}
+td.sCommentThread {
+	text-align : right; 
+} 
+td.sCommentRank {
+	text-align : right; 
+} 
+
+h1 {
+	font-family : Tahoma;
+
+} 
+h2 {
+	font-family : tahoma;
+} 
+h3 {
+	font-family : tahoma;
+} 
+p {
+	font-family : tahoma;
+}
+.admin_menu {
+	font-family : Tahoma;
+} 
+ .admin_menu a , .admin_menu_thumb a {
+	font-family : Tahoma;
+
+}
+.admin_menu a:hover , .admin_menu_thumb a:hover , .alblink a:hover , .catlink a:hover , .user_thumb_infobox a:hover {
+     
+}
+.admin_menu_thumb {
+     font-family : Tahoma;
+}
+.button {
+	font-family : tahoma;
+} 
+.checkbox {
+	font-family : tahoma;
+}
+.listbox {
+	font-family : tahoma;
+} 
+.navmenu {
+	font-family : tahoma;
+}
+ .navmenu a {
+     
+}
+ .navmenu a:hover {
+     
+}
+.sortorder_options {
+	font-family : tahoma;
+}
+.statlink a {
+     
+}
+ .statlink a:hover {
+     
+}
+.textinput {
+     font-family : tahoma;
+}
+.user_thumb_infobox a {
+     
+}
+td#mainmenu a {direction: rtl; text-align:right;}
+td#mainmenu a:hover {}
+td#mainmenu a.menuTop {}
+td#mainmenu a.menuMain {}
+td#mainmenu a.menuSub {direction: rtl; text-align:right; }
+td#usermenu a {direction: rtl; text-align:right; }
+td#usermenu a:hover {}
+td#usermenu a.menuTop {}
+td#usermenu a.highlight {direction: rtl; font-family: Tahoma; font-size: 8pt;}
+.blockTitle {direction: rtl; font-family: Tahoma; font-size: 8pt; text-align: center;  }
+.blockContent{direction: rtl; font-family: Tahoma; font-size: 8pt;  text-align: right; }
